@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -8,21 +9,28 @@
 <?import javafx.scene.layout.*?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="auth.AuthController">
+<AnchorPane prefHeight="400.0" prefWidth="415.0" style="-fx-background-color: #4b0082;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="auth.AuthController">
    <children>
       <AnchorPane layoutX="-1.0" layoutY="46.0" prefHeight="96.0" prefWidth="415.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="46.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="Авторизация" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Авторизация" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="34.0" layoutY="124.0" prefHeight="104.0" prefWidth="348.0" AnchorPane.bottomAnchor="172.0" AnchorPane.leftAnchor="34.0" AnchorPane.rightAnchor="33.0" AnchorPane.topAnchor="124.0">
+      <AnchorPane layoutX="1.0" layoutY="124.0" prefHeight="104.0" prefWidth="415.0" AnchorPane.bottomAnchor="172.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="124.0">
          <children>
-            <VBox alignment="CENTER" layoutX="36.0" layoutY="13.0" prefHeight="75.0" prefWidth="280.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="32.0">
+            <VBox alignment="CENTER" layoutY="3.0" prefHeight="96.0" prefWidth="415.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
                   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
                      <children>
-                        <Label text="Логин" />
-                        <TextField fx:id="loginField" />
+                        <TextField fx:id="loginField" promptText="Логин" stylesheets="@text-field.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </TextField>
                      </children>
                      <VBox.margin>
                         <Insets />
@@ -30,22 +38,25 @@
                   </HBox>
                   <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="18.0">
                      <children>
-                        <Label text="Пароль" />
-                        <PasswordField fx:id="passwordField" />
+                        <PasswordField fx:id="passwordField" promptText="Пароль" stylesheets="@text-field.css">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </PasswordField>
                      </children>
                   </HBox>
                </children>
             </VBox>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="53.0" layoutY="217.0" prefHeight="61.0" prefWidth="348.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="14.0">
+      <AnchorPane layoutY="218.0" prefHeight="85.0" prefWidth="371.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <HBox alignment="CENTER" layoutX="-36.0" prefHeight="100.0" prefWidth="200.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="348.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button fx:id="regusterBtn" mnemonicParsing="false" onAction="#register" prefWidth="90.0" text="Регистрация" />
-                  <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" prefWidth="90.0" text="Войти" />
+                  <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" prefWidth="110.0" stylesheets="@button.css" text="Войти" textFill="WHITE" />
+                  <Button fx:id="registerBtn" mnemonicParsing="false" onAction="#register" prefWidth="110.0" stylesheets="@button.css" text="Регистрация" />
                </children>
-            </HBox>
+            </VBox>
          </children>
       </AnchorPane>
    </children>
